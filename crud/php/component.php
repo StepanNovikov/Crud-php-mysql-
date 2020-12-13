@@ -13,7 +13,7 @@
 
     function buttonElement($btnId,$styleclass,$text,$name,$attr){
         $btn = "
-            <button name='$name' '$attr' class='$styleclass' id='$btnid'>$text</button>
+            <button name='$name' '$attr' class='$styleclass' id='$btnId'>$text</button>
         ";
 
         echo $btn;

@@ -1,6 +1,9 @@
 <?php
     require_once("../crud/php/component.php");
+    require_once("../crud/php/db.php");
+    require_once("../crud/php/operation.php");
 
+    CreateDb();
 ?>
 
 <!DOCTYPE html>
@@ -37,7 +40,7 @@
                             <?php inputElemenet("<i class='fas fa-dollar-sign'></i>", "Price","book_price",""); ?>
                         </div>
                     </div>
-                    <div class="d-flex">
+                    <div class="d-flex justify-content-center">
                         <?php buttonElement("btn-create","btn btn-success", "<i class='fas fa-plus'></i>", "create","data-toggle='tooltip' data-placement='bottom' title='Create'") ?>
                         <?php buttonElement("btn-read","btn btn-primary", "<i class='fas fa-sync'></i>", "read","data-toggle='tooltip' data-placement='bottom' title='Read'") ?>
                         <?php buttonElement("btn-update","btn btn-light border", "<i class='fas fa-pen-alt'></i>", "update","data-toggle='tooltip' data-placement='bottom' title='Update'") ?>
@@ -46,6 +49,29 @@
                     </div>
                     
                 </form>
+            </div>
+
+            <div class="d-flex table-data">
+                <table class="table table-striped table-dark">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Book Name</th>
+                            <th>Publisher</th>
+                            <th>Book Price</th>
+                            <th>Edit</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                        <tr>
+                            <td>1</td>
+                            <td>Book Name</td>
+                            <td>Daily Tuition</td>
+                            <td>44.99</td>
+                            <td><i class="fas fa-edit btnedit"></i></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </main>
